@@ -1,0 +1,16 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var ProductService_1 = require("./ProductService");
+var product_1 = require("./product");
+var _productService = new ProductService_1.ProductService();
+var result;
+result = _productService.getById(2);
+var p = new product_1.Product();
+p.id = 2;
+p.name = "Iphone 7";
+p.category = "Telefon";
+p.price = 5000;
+_productService.saveProcut(p);
+// _productService.deleteProduct(result);
+result = _productService.getProcuts();
+console.log(result);
